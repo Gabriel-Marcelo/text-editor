@@ -1,0 +1,28 @@
+{
+  "npmScope": "text-editor",
+  "implicitDependencies": {
+    "angular.json": "*",
+    "package.json": {
+      "dependencies": "*",
+      "devDependencies": "*"
+    },
+    "tsconfig.json": "*",
+    "tslint.json": "*",
+    "nx.json": "*"
+  },
+  "projects": {
+    "text-editor": {
+      "tags": []
+    },
+    "text-editor-e2e": {
+      "tags": [],
+      "implicitDependencies": ["text-editor"]
+    },
+    "api": {
+      "tags": []
+    },
+    "api-interfaces": {
+      "tags": []
+    }
+  }
+}
