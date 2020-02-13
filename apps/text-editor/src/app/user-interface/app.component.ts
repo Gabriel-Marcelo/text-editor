@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Message } from '@text-editor/api-interfaces';
 
@@ -7,7 +7,25 @@ import { Message } from '@text-editor/api-interfaces';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-  hello$ = this.http.get<Message>('/api/hello');
-  constructor(private http: HttpClient) {}
+export class AppComponent{
+
+  textoSelecionado: string;
+
+
+
+  pegarTextoSelecionado() {
+    const texto = window.getSelection();
+    this.textoSelecionado = texto.toString();
+  }
+
+  setarNegrito(){
+
+
+    const elemento = document.querySelector('.flex-item h1');
+
+
+    //console.log(this.textoSelecionado);
+  }
+
+
 }

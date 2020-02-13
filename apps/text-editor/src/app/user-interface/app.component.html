@@ -7,10 +7,25 @@
 <!--</div>-->
 <!--<div>Message: {{ hello$ | async | json }}</div>-->
 
-<section fxLayout="column" fxLayoutAlign="center">
-  <h1>Header</h1>
-  <mat-form-field class="example-full-width" style="background-color: blue">
-    <mat-label>Leave a comment</mat-label>
-    <textarea matInput placeholder="Ex. It makes me feel..."></textarea>
-  </mat-form-field>
+<section class="container">
+  <div class="flex-item" >
+    <div class="funcoes">
+      <span><a (click)="setarNegrito()" >T</a></span>
+      <span>B</span>
+      <span><i class="fas fa-italic"></i></span>
+      <span>< ></span>
+      <span><i class="fas fa-list"></i></span>
+      <span><i class="fas fa-underline"></i></span>
+      <span><i class="fas fa-quote-right"></i></span>
+      <span><i class="fas fa-link"></i></span>
+    </div>
+    <h1 (pointerleave)="pegarTextoSelecionado()" >Header</h1>
+    <h3 (pointerleave)="pegarTextoSelecionado()" >my awesome editor</h3>
+
+    <textarea (pointerleave)="pegarTextoSelecionado()"></textarea>
+
+
+
+  </div>
 </section>
+
