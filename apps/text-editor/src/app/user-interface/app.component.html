@@ -19,13 +19,9 @@
       <span><i class="fas fa-quote-right"></i></span>
       <span><i class="fas fa-link"></i></span>
     </div>
-    <h1 (pointerleave)="pegarTextoSelecionado()" >Header</h1>
-    <h3 (pointerleave)="pegarTextoSelecionado()" >my awesome editor</h3>
-
-    <textarea (pointerleave)="pegarTextoSelecionado()"></textarea>
-
-
-
+    <h1 (click)="pegarTextoSelecionado($event)">Header</h1>
+    <h3 (click)="pegarTextoSelecionado($event)">my awesome editor</h3>
+    <textarea (click)="pegarTextoSelecionado($event)"></textarea>
   </div>
 </section>
 
